@@ -135,19 +135,26 @@
       </div> <!--div class="lof-main-wapper"-->
     </div> <!--div class="lof-slidecontent" id="lofslidecontent45"-->
 
-    <!-- ブログ・twitter等 -->
     <script type="text/javascript">
-var _lofmain = $('lofslidecontent45');
-var _lofscmain = _lofmain.getElement('.lof-main-wapper');
-var _lofnavigator = _lofmain.getElement('.lof-navigator-outer .lof-navigator');
-var object = new LofFlashContent( _lofscmain,
-_lofnavigator,
-_lofmain.getElement('.lof-navigator-outer'),
-{ fxObject:{ transition:Fx.Transitions.Quad.easeInOut, duration:800},
-interval:3000,
-direction:'opacity' } );
-object.start( true, _lofmain.getElement('.preload') );
-</script> <article id="contents" class="columnA">
+      var _lofmain = $('lofslidecontent45');
+      var _lofscmain = _lofmain.getElement('.lof-main-wapper');
+      var _lofnavigator = _lofmain.getElement('.lof-navigator-outer .lof-navigator');
+      var object = new LofFlashContent(
+        _lofscmain,
+        _lofnavigator,
+        _lofmain.getElement('.lof-navigator-outer'),
+        {
+          fxObject:{ transition:Fx.Transitions.Quad.easeInOut, duration:800},
+        interval:3000,
+        direction:'opacity'
+        }
+      );
+
+      object.start( true, _lofmain.getElement('.preload') );
+    </script>
+
+    <!-- ブログ・twitter等 -->
+    <article id="contents" class="columnA">
       <h1 class="title">HOME</h1>
 <?php
 $posts = get_posts("numberposts=3&category=&orderby=post_date&offset=0");
